@@ -1,0 +1,13 @@
+$style:
+- /_style
+- /_style/local
+- verbatim: |-
+    \newcommand\jeolminstitutionname
+        {{\upshape[}\/Московские сборы по математике{\upshape\/]}}
+    \newcommand\jeolmdaterange
+        {{\upshape[}\/30 марта -- 10 апреля 2015{\upshape\/]}}
+
+_style:
+  jeolm:
+    $delegate$groups: false
+

@@ -1,0 +1,47 @@
+!!omap
+
+- $large$common$timetable: true
+- $common$timetable: &common-timetable !!omap
+  - 2015-03-30: [2, 3]
+  - 2015-03-31: [1, 2, 3]
+  - 2015-04-01: [1, 2, 3]
+  - 2015-04-02: [1, 2, 3]
+  - 2015-04-03: [1, 2, 3]
+  - 2015-04-04: [1, 2, 3]
+  - 2015-04-05: [1, 2]
+  - 2015-04-06: [1, 2, 3]
+  - 2015-04-07: [1, 2, 3]
+  - 2015-04-08: [1, 2, 3]
+  - 2015-04-09: [1, 2, 3]
+  - 2015-04-10: [1, 2]
+
+- $large$group[g9r2]: true
+- $group[g9r2]:
+    name: Белые Ферзи
+    timetable: *common-timetable
+
+- $large$group[g9r1]: true
+- $group[g9r1]:
+    name: Чёрные Ферзи
+    timetable: *common-timetable
+
+- $large$group[g10r2]: true
+- $group[g10r2]:
+    name: Белые Ладьи
+    timetable: *common-timetable
+
+- $large$group[g10r1]: true
+- $group[g10r1]:
+    name: Чёрные Ладьи
+    timetable: *common-timetable
+
+- $large$group[g11r2]: true
+- $group[g11r2]:
+    name: Белые Слоны
+    timetable: *common-timetable
+
+- $large$group[g11r1]: true
+- $group[g11r1]:
+    name: Чёрные Слоны
+    timetable: *common-timetable
+

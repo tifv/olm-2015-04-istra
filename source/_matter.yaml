@@ -1,0 +1,22 @@
+$matter$groups: true
+
+_ashap-link:
+  $target$able: false
+  $delegate$groups: false
+  $delegate$groups$into: false
+  $matter$groups: false
+  $matter$groups$into: false
+  $matter:
+  - verbatim: >-
+      \begin{flushright}\ttfamily\small
+          ashap.info/Uroki/Mosbory
+      \end{flushright}
+
+Integral:
+  $delegate$groups: false
+  $delegate$groups$into: false
+  $matter$groups: false
+  $matter$groups$into: false
+  $matter:
+  - /
+

@@ -1,0 +1,158 @@
+% $date: 2015-03-31
+% $timetable:
+%   g10r1:
+%     2015-03-31:
+%       2:
+
+\section*{Неравенство Йенсена}
+
+% $authors:
+% - Андрей Меньщиков
+
+\definition
+Функция $f \colon [a; b] \to \mathbb{R}$ называется \emph{выпуклой вниз}
+на~отрезке $[a; b]$, если для любых $x, y \in [a; b]$ и~любых
+$\alpha, \beta \geq 0$ таких, что $\alpha + \beta = 1$, выполняется
+\(
+    f(\alpha \cdot x + \beta \cdot y)
+\leq
+    \alpha \cdot f(x)+ \beta \cdot f(y)
+\).
+Функция~$f$ называется \emph{выпуклой вверх} на~отрезке $[a; b]$, если при
+тех~же условиях выполняется аналогичное неравенство со~знаком~$\geq$.
+
+\theorem
+Если для всех $x \in (a; b)$ выполняется $f''(x) \geq 0$, то~функция~$f$
+выпукла вниз на~отрезке $[a; b]$.
+Если для всех $x \in (a; b)$ выполняется $f''(x) \leq 0$, то~функция~$f$
+выпукла вверх на~отрезке $[a; b]$.
+
+\begin{problems}
+
+\item\textbf{Неравенство Йенсена.}
+Пусть функция~$f$ выпукла вниз на~отрезке $[a;b]$,
+$x_1, x_2, \ldots, x_n \in [a; b]$,
+$\alpha_1, \alpha_2, \ldots, \alpha_n \geq 0$
+и~$\alpha_1 + \alpha_2 + \ldots + \alpha_n = 1$.
+Тогда справедливо неравенство
+\[
+    f(\alpha_1 \cdot x_1 + \ldots + \alpha_n \cdot x_n)
+\leq
+    \alpha_1 \cdot f(x_1) + \ldots + \alpha_n \cdot f(x_n)
+\;.\]
+Для выпуклой вверх функции выполнено аналогичное неравенство со~знаком~$\geq$.
+
+\item
+Пусть $x_1, x_2, \ldots, x_n \in [0; \pi]$.
+Докажите неравенство 
+\[
+    \frac{\sin(x_1) + \ldots + \sin(x_n)}{n}
+\leq
+    \sin\left(
+        \frac{x_1 + \ldots + x_n}{n}
+    \right)
+\;.\]
+
+\item\emph{Неравенство Коши.}
+Используя неравенство Йенсена для $y = \ln x$, докажите для
+$x_1, x_2, \ldots, x_n \geq 0$ неравенство:
+\[
+    \frac{x_1 + \ldots + x_n}{n}
+\geq
+    \sqrt[n]{x_1 \cdot \ldots \cdot x_n}
+\;.\]
+
+\item\emph{Неравенство о~среднем степенном.}
+Используя неравенство Йенсена для $y = x^{\alpha}$, докажите для
+$x_1, x_2, \ldots, x_n \geq 0$, $\alpha > 1$ неравенство:
+\[
+    \left(
+        \frac{
+            x_1^{\alpha} + x_2^{\alpha} + \ldots + x_n^{\alpha}
+        }{n}
+    \right)^{\frac{1}{\alpha}}
+\geq
+    \frac{x_1 + x_2 + \ldots + x_n}{n}
+\;.\]
+
+\item\emph{Неравенство Коши-Буняковского-Шварца.}
+Используя неравенство Йенсена для $y = \frac{1}{x}$, докажите:
+\[
+    (a_1^2 + \ldots + a_n^2) \cdot (b_1^2 + \ldots + b_n^2)
+\geq
+    (a_1 b_1 + \ldots + a_n b_n)^2
+\;.\]
+
+\item
+Для положительных чисел $a$, $b$, $c$ докажите, что
+\[
+    \frac{a + b + c}{3}
+\leq
+    \sqrt[a+b+c]{a^a b^b c^c}
+\leq
+    \frac{a^2 + b^2 + c^2}{a + b + c}
+\;.\]
+
+\item
+Пусть $\alpha$, $\beta$, $\gamma$~--- углы некоторого треугольника
+(возможно, вырожденного).
+Какие значения может принимать величина
+\\
+\sp $\sin \alpha + \sin \beta + \sin \gamma$\,;
+\quad
+\sp $\cos \alpha + \cos \beta + \cos \gamma$\,?
+
+\item
+Сумма положительных чисел $x$, $y$, $z$ равна 1.
+Докажите, что
+\[
+    \left( 1 + \frac{1}{x} \right) \cdot
+    \left( 1 + \frac{1}{y} \right) \cdot
+    \left( 1 + \frac{1}{z} \right)
+\geq
+    64
+\,.\]
+
+\item
+Для положительных чисел $a$, $b$, $c$, $d$ докажите неравенство
+\[
+    \left(\frac{a+b}{c+d}\right)^{a+b}
+\leq
+    \left(\frac{a}{c}\right)^a
+    \cdot
+    \left(\frac{b}{d}\right)^b
+\;.\]
+
+\item
+Числа $a$, $b$, $c$ являются длинами сторон некоторого треугольника.
+Докажите неравенство
+\[
+    \sqrt{a} \cdot (a + c - b) +
+    \sqrt{b} \cdot (a + b - c) +
+    \sqrt{c} \cdot (b + c - a)
+\leq
+    \sqrt{(a^2 + b^2 + c^2) \cdot (a + b + c)}
+\,.\]
+
+\item
+Докажите, что для $x_1, x_2, \ldots, x_n \geq 1$ выполняется неравенство
+\[
+    \frac{1}{1 + x_1} + \frac{1}{1 + x_2}
+    + \ldots +
+    \frac{1}{1 + x_n}
+\geq
+    \frac{n}{1 + \sqrt[n]{x_1 x_2 \ldots x_n}}
+\;.\]
+
+%\item
+%Пусть $a, b, c, d > 0$ и $a b c d = 1$.
+%Докажите, что
+%\[
+%    \frac{1}{(1 + a)^2} + \frac{1}{(1 + b)^2} +
+%    \frac{1}{(1 + c)^2} + \frac{1}{(1 + d)^2}
+%\geq
+%    1
+%\,.\]
+
+\end{problems}
+
