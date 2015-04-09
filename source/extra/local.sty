@@ -1,0 +1,18 @@
+\ProvidesPackage{training-local}
+\let\jeolmheadertemplate\undefined
+\newcommand\jeolmheader{%
+{\Large\vspace{4ex}}\par%
+\begingroup\small\sffamily%
+\strut\ifx\jeolmauthors\relax%
+  \hfill{\bfseries\jeolminstitutionname}\hfill
+\else
+  {\bfseries\jeolminstitutionname}%
+    \hfill
+  {\mdseries\jeolmauthors}%
+\fi\strut\nopagebreak\\%
+\rule[1ex]{\textwidth}{0.5pt} %
+\endgroup% \small\sffamily
+{\vspace{-1ex}\Large\vspace{-4ex}\vspace{-\parskip}}}
+\let\jeolmauthors\relax
+\let\jeolmgroupname\relax
+\let\jeolmdate\relax

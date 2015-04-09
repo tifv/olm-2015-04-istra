@@ -1,0 +1,11 @@
+$delegate$groups$into: false
+$delegate$groups: false
+
+$delegate[-miscellany]:
+- algebra
+- algebra[with-solutions]
+- geometry
+- geometry[with-solutions]
+- combinatorics
+- combinatorics[with-solutions]
+

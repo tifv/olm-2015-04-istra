@@ -1,0 +1,19 @@
+$matter$groups$into: false
+$matter$groups: false
+
+$matter[miscellany]:
+- - algebra
+- - geometry
+- - combinatorics
+
+$style:
+- /_style[resize-to]
+- local
+- verbatim: |-
+    \newcommand\jeolminstitutionname
+        {{\upshape[}\/%
+        Подготовка ко Всероссийской олимпиаде по математике%
+        {\upshape\/]}}
+    \newcommand\jeolmdaterange
+        {{\upshape[}\/30 марта -- 10 апреля 2015{\upshape\/]}}
+
