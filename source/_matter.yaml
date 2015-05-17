@@ -17,6 +17,42 @@ Integral:
   $groups$delegate$into: false
   $groups$matter: false
   $groups$matter$into: false
-  $matter:
-  - /
+
+  $style:
+  - document_class: book
+    options: [a4paper]
+  - ..
+
+  $matter[-source-link,-add-toc]:
+  - .[source-link,add-toc]
+
+  $matter[-integral,source-link,add-toc]:
+
+  - verbatim: \tableofcontents
+
+  - verbatim: \mainmatter
+  - .[integral]
+
+  - verbatim: \chapter{Дополнительные материалы}\clearpage
+
+  - - /olympiad/g9-1/[with-solutions]
+  - - /algebra/inequality/karamata-proof
+  - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс :)}
+    - /extra[integral]
+    - /extra[integral,with-solutions]
+    - verbatim: \endgroup
+
+  $matter[integral]:
+  - verbatim: \chapter{Белые Ферзи (9-2)}
+  - /[g9r2]
+  - verbatim: \chapter{Чёрные Ферзи (9-1)}
+  - /[g9r1]
+  - verbatim: \chapter{Белые Ладьи (10-2)}
+  - /[g10r2]
+  - verbatim: \chapter{Чёрные Ладьи (10-1)}
+  - /[g10r1]
+  - verbatim: \chapter{Белые Слоны (11-2)}
+  - /[g11r2]
+  - verbatim: \chapter{Чёрные Слоны (11-1)}
+  - /[g11r1]
 

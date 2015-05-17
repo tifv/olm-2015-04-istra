@@ -20,9 +20,11 @@
 % - .[-with-solutions]
 % - verbatim: \endgroup % \let\ifincludesolutions
 
-\begingroup\providecommand{\ifincludesolutions}{\iffalse}
+\begingroup\providecommand\ifincludesolutions{\iffalse}
 
-\newenvironment{problem-source}{\em\small\par\strut\hfill}{}
+\ifincludesolutions
+\subsection*{Версия с решениями}
+\fi
 
 \begin{problems}
 
@@ -31,9 +33,9 @@
 делитель на~55 больше самого маленького собственного делителя.
 (\emph{Собственными} называются все натуральные делители числа кроме него самого
 и~единицы).
-\begin{problem-source}
+\begingroup\em\small\par\strut\hfill
     Олимпиада им.\,Кукина
-\end{problem-source}
+\endgroup
 \end{problems}
 
 \ifincludesolutions
@@ -57,9 +59,9 @@
 Он~округлил каждое из~этих трех чисел до~ближайшего целого и~результаты сложил.
 Получилось 120.
 Найдите $x$.
-\begin{problem-source}
+\begingroup\em\small\par\strut\hfill
     А.\,Шаповалов
-\end{problem-source}
+\endgroup
 \end{problems}
 
 \ifincludesolutions
@@ -105,9 +107,9 @@ $R(2 x) + R(4 x) + R(5 x)$ обозначим $S$.
 точки $C'$, $A'$ и~$B'$ соответственно так, что угол $A'C'B'$~--- прямой.
 Докажите, что отрезок $A'B'$ длиннее диаметра вписанной окружности
 треугольника $ABC$.
-\begin{problem-source}
+\begingroup\em\small\par\strut\hfill
     М.\,Волчкевич, 4-я устная олимпиада по геометрии, 2006\,г.
-\end{problem-source}
+\endgroup
 \end{problems}
 
 \ifincludesolutions
@@ -152,9 +154,9 @@ $A'B'$, то есть параллельны.
 (Ладья бьет поле или другую ладью на~той~же вертикали или горизонтали, если
 между ними нет других фигур.
 Ладья себя не~бьет.)
-\begin{problem-source}
+\begingroup\em\small\par\strut\hfill
     А.\,Шаповалов
-\end{problem-source}
+\endgroup
 \end{problems}
 
 \ifincludesolutions
@@ -188,4 +190,6 @@ $A'B'$, то есть параллельны.
 выделим вдоль главной диагонали 25 квадратов $2 \times 2$ и заполним
 их ладьями.
 \fi % \ifincludesolutions
+
+\endgroup % \providecommand\ifincludesolutions
 

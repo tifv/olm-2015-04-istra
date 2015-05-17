@@ -1,0 +1,89 @@
+!!omap
+
+##########
+
+# g9r2 2015-03-31 1
+# g9r1 2015-03-31 2
+- construction-and-locus-with-area:
+
+# g9r2 2015-04-01 1
+# g9r1 2015-04-01 2
+- ptolemy-inequality:
+
+# g9r2 2015-04-02 1
+# g9r1 2015-04-02 2
+- carnot-theorem:
+
+# g9r2 2015-04-04 1
+- locus-g9r2:
+
+# g9r2 2015-04-06 3
+- radical-axis-g9r2:
+
+# g9r2 2015-04-08 3
+- mixture-g9r2-more:
+
+# g9r1 2015-04-05 2
+- orthocenter-g9r1:
+
+# g9r1 2015-04-06 2
+- mixture-g9r1-line-segment:
+
+# g9r1 2015-04-07 2
+- inscribed-circles-g9r1:
+
+##########
+
+# g10r2 2015-04-03 2
+- orthocenter-g10r2:
+
+# g10r2 2015-04-03 3
+- arc-midpoints:
+
+# g10r1 2015-04-02 3
+- mixture-g10r1-independent-objects:
+
+# g10r1 2015-04-04 3
+- isogonal-conjugate-g10r1:
+
+# g10r1 2015-04-06 1
+- mixture-g10r1-more:
+
+##########
+
+# g11r2 2015-03-30 3
+- mixture-g11r2:
+
+# g11r2 2015-03-31 3
+- homothety-g11r2:
+
+# g11r2 2015-04-03 3
+- radical-axis-g11r2:
+
+# g11r2 2015-04-04 2
+- trident-g11r2:
+
+# g11r1 2015-04-03 1
+- combinatorial-g11r1:
+
+# g11r1 2015-04-07 1
+- mixture-g11r1-2:
+
+##########
+
+# g10r2 2015-04-01 3
+# g10r2 2015-04-02 1
+- radical-axis-g10r2:
+
+# g9r2 2015-04-03 3
+# g9r1 2015-04-04 2
+# g10r1 2015-04-07 1
+- another-circle:
+
+# g11r2 2015-04-02 1
+# g11r2 2015-04-07 3
+# g11r1 2015-04-02 2
+# g11r1 2015-04-04 1
+# g11r1 2015-04-09 2
+- solid-mixture-g11:
+

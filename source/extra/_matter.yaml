@@ -1,7 +1,7 @@
 $groups$matter$into: false
 $groups$matter: false
 
-$matter[miscellany]:
+$matter[integral]:
 - - algebra
 - - geometry
 - - combinatorics

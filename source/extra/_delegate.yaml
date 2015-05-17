@@ -1,7 +1,7 @@
 $groups$delegate$into: false
 $groups$delegate: false
 
-$delegate[-miscellany]:
+$delegate[-integral]:
 - algebra
 - algebra[with-solutions]
 - geometry
