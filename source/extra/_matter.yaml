@@ -1,5 +1,5 @@
-$matter$groups$into: false
-$matter$groups: false
+$groups$matter$into: false
+$groups$matter: false
 
 $matter[miscellany]:
 - - algebra

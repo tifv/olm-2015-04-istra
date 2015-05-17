@@ -1,6 +1,6 @@
 r2:
-  $delegate$groups$into: false
-  $matter$groups$into: false
+  $groups$delegate$into: false
+  $groups$matter$into: false
   $timetable:
     g9r2:
       2015-04-02: {}
@@ -17,8 +17,8 @@ r2:
   - ../r2-more[contained]
 
 r1:
-  $delegate$groups$into: false
-  $matter$groups$into: false
+  $groups$delegate$into: false
+  $groups$matter$into: false
   $timetable:
     g9r1:
       2015-04-02: {}

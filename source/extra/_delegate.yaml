@@ -1,5 +1,5 @@
-$delegate$groups$into: false
-$delegate$groups: false
+$groups$delegate$into: false
+$groups$delegate: false
 
 $delegate[-miscellany]:
 - algebra

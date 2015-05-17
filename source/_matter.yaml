@@ -1,11 +1,11 @@
-$matter$groups: true
+$groups$matter: true
 
 _ashap-link:
   $target$able: false
-  $delegate$groups: false
-  $delegate$groups$into: false
-  $matter$groups: false
-  $matter$groups$into: false
+  $groups$delegate: false
+  $groups$delegate$into: false
+  $groups$matter: false
+  $groups$matter$into: false
   $matter:
   - verbatim: >-
       \begin{flushright}\ttfamily\small
@@ -13,10 +13,10 @@ _ashap-link:
       \end{flushright}
 
 Integral:
-  $delegate$groups: false
-  $delegate$groups$into: false
-  $matter$groups: false
-  $matter$groups$into: false
+  $groups$delegate: false
+  $groups$delegate$into: false
+  $groups$matter: false
+  $groups$matter$into: false
   $matter:
   - /
 

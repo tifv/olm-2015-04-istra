@@ -8,6 +8,5 @@ $style:
         {{\upshape[}\/30 марта -- 10 апреля 2015{\upshape\/]}}
 
 _style:
-  jeolm:
-    $delegate$groups: false
+  $groups$delegate: false
 
