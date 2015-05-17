@@ -1,0 +1,37 @@
+r2:
+  $groups$delegate$into: false
+  $groups$matter$into: false
+  $timetable:
+    g9r2:
+      2015-04-10: {}
+  $authors:
+  - Александр Шаповалов
+  $matter[g9r2,-no-header]:
+  - .[header]
+  $matter[g9r2,-no-ashap-link,no-header]:
+  - .[no-ashap-link]
+  - /_ashap-link
+  $matter[g9r2,no-header]:
+  - ../r2-main
+  - verbatim: \resetproblem\hrulefill
+  - ../advanced[contained]
+
+r1:
+  $groups$delegate$into: false
+  $groups$matter$into: false
+  $timetable:
+    g9r1:
+      2015-04-10: {}
+  $authors:
+  - Александр Шаповалов
+  $matter[g9r1,-no-header]:
+  - .[header]
+  $matter[g9r1,-no-ashap-link,no-header]:
+  - .[no-ashap-link]
+  - /_ashap-link
+  $matter[g9r1,no-header]:
+  - ../r1-main
+  - verbatim: \resetproblem\hrulefill
+  - ../advanced[contained]
+
+
