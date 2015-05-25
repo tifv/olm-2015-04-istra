@@ -19,14 +19,14 @@ Integral:
   $groups$matter$into: false
 
   $style:
-  - document_class: book
-    options: [a4paper]
-  - ..
+  - document class: book
+    options: [10pt, a4paper]
+  - ..[no-document-class]
 
-  $matter[-source-link,-add-toc]:
-  - .[source-link,add-toc]
+  $matter[-add-toc]:
+  - .[add-toc]
 
-  $matter[-integral,source-link,add-toc]:
+  $matter[-integral,add-toc]:
 
   - verbatim: \tableofcontents
 
@@ -34,12 +34,26 @@ Integral:
   - .[integral]
 
   - verbatim: \chapter{Дополнительные материалы}\clearpage
+  - preamble package: hyperref
 
-  - - /olympiad/g9-1/[with-solutions]
+  - - verbatim:
+        \phantomsection\addcontentsline{toc}{section}
+          {Тренировочная олимпиада --- 1, с решениями (Белые Ферзи)}
+    - /olympiad/g9-1/r2[with-solutions,-add-toc]
+  - - verbatim:
+        \phantomsection\addcontentsline{toc}{section}
+          {Тренировочная олимпиада --- 1, с решениями (Чёрные Ферзи)}
+    - /olympiad/g9-1/r1[with-solutions,-add-toc]
   - - /algebra/inequality/karamata-proof
-  - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс :)}
-    - /extra[integral]
-    - /extra[integral,with-solutions]
+  - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс}
+    - verbatim:
+        \phantomsection\addcontentsline{toc}{section}
+          {На Северный полюс}
+    - /extra[integral,-add-toc]
+    - verbatim:
+        \phantomsection\addcontentsline{toc}{section}
+          {На Северный полюс, с решениями}
+    - /extra[integral,-add-toc,with-solutions]
     - verbatim: \endgroup
 
   $matter[integral]:
