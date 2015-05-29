@@ -28,13 +28,16 @@ Integral:
 
   $matter[-integral,add-toc]:
 
+  - preamble package: hyperref
+  - preamble verbatim: >-
+      \hypersetup{colorlinks}
+    provide: hypersetup:colorlinks
   - verbatim: \tableofcontents
 
   - verbatim: \mainmatter
   - .[integral]
 
   - verbatim: \chapter{Дополнительные материалы}\clearpage
-  - preamble package: hyperref
 
   - - verbatim:
         \phantomsection\addcontentsline{toc}{section}
