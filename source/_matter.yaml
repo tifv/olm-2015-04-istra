@@ -18,6 +18,13 @@ Integral:
   $groups$matter: false
   $groups$matter$into: false
 
+  $build$options[xelatex]:
+    compiler: xelatex
+  $build$options[lualatex]:
+    compiler: lualatex
+  $build$options[pdflatex]:
+    compiler: pdflatex
+
   $style:
   - document class: book
     options: [10pt, a4paper]

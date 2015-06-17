@@ -11,17 +11,20 @@
       {\mdseries\jeolmauthors}%
     \fi\strut\nopagebreak\\%
     \strut{\itshape\jeolmdaterange}\hfill%
-    \ifx\jeolmgroupname\relax\else%
-        \begingroup\edef\x{\endgroup\noexpand\in@{,}{\jeolmgroupname}}\x%
-        \ifin@ группы: \else группа:\fi%
-        \enspace{\large\strut\jeolmgroupname}%
-    \fi\ifx\jeolmdate\relax\else%
+    \jeolmgroupnames
+    \ifx\jeolmdate\relax\else%
         \qquad{\itshape\jeolmdate}%
     \fi\strut\nopagebreak\\%
     \rule[1ex]{\textwidth}{0.5pt} %
     \endgroup% \small\sffamily
     {\vspace{-1ex}\Large\vspace{-4ex}\vspace{-\parskip}}%
 \endgroup}
+\newcommand{\jeolmgroupnames}{\ifx\jeolmgroupname\relax\else
+\smash{%
+    \begingroup\edef\x{\endgroup\noexpand\in@{,}{\jeolmgroupname}}\x%
+    \ifin@ группы:\else группа:\fi%
+    \enspace{\large\jeolmgroupname}%
+\fi}}
 \let\jeolmauthors\relax
 \let\jeolmgroupname\relax
 \let\jeolmdate\relax

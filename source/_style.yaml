@@ -1,7 +1,8 @@
-$build$compiler$default: xelatex
+$build$compiler$default: pdflatex
 $style:
-- /_style
-- /_style/local
+- delegate: /_style
+- delegate: /_style/local
+  condition: {not: no-style-local}
 - verbatim: |-
     \newcommand\jeolminstitutionname
         {{\upshape[}\/Московские сборы по математике{\upshape\/]}}
