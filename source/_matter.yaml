@@ -42,6 +42,7 @@ Integral:
   - preamble verbatim: >-
       \hypersetup{colorlinks}
     provide: hypersetup:colorlinks
+    condition: source-link
 
   - - delegate: /integral[-add-toc]
   - verbatim: \tableofcontents
