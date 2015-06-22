@@ -41,6 +41,12 @@
 
 # g10r2 2015-04-01 1
 - two-sided-estimate:
+# g10r2 2015-04-03 1
+- descent-method-g10r2:
+# g10r2 2015-04-08 3
+- table-g10r2:
+# g10r2 2015-04-09 2
+- geometrical-g10r2:
 
 # g10r1 2015-04-02 1
 - table-g10r1:

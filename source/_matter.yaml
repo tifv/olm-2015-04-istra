@@ -1,16 +1,19 @@
 $groups$matter: true
 
 _ashap-link:
+  link:
+    $matter:
+    - verbatim:
+        \url{www.ashap.info/Uroki/Mosbory}
   $target$able: false
   $groups$delegate: false
   $groups$delegate$into: false
   $groups$matter: false
   $groups$matter$into: false
   $matter:
-  - verbatim: >-
-      \begin{flushright}\ttfamily\small
-          www.ashap.info/Uroki/Mosbory
-      \end{flushright}
+  - verbatim: \begin{flushright}\ttfamily\small
+  - delegate: link
+  - verbatim: \end{flushright}
 
 Integral:
   $groups$delegate: false
@@ -39,10 +42,12 @@ Integral:
   - preamble verbatim: >-
       \hypersetup{colorlinks}
     provide: hypersetup:colorlinks
+
+  - - delegate: /integral[-add-toc]
   - verbatim: \tableofcontents
 
   - verbatim: \mainmatter
-  - .[integral]
+  - delegate: .[integral,no-ashap-link]
 
   - verbatim: \chapter{Дополнительные материалы}\clearpage
 

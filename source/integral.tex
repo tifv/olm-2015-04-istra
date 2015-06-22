@@ -1,0 +1,106 @@
+% $groups$delegate: false
+% $groups$delegate$into: false
+% $groups$matter: false
+% $groups$matter$into: false
+
+% $matter[-header,-no-header]:
+% - .[no-header]
+
+% $matter[-matter-guard,no-header]:
+% - preamble package: hyperref
+% - verbatim: \begingroup\let\ifsourcelinks\iftrue
+%   condition: source-link
+% - .[matter-guard]
+% - verbatim: \endgroup
+%   condition: source-link
+
+\begingroup
+\providecommand{\ifsourcelinks}{\iffalse}
+
+\strut
+
+\vfill
+
+\begin{center}
+\scalebox{2}{\(\displaystyle
+\int\limits_{\text{30 марта 2015}}^{\text{10 апреля 2015}}
+    \dbinom{\text{\ Московские сборы\ }}{\text{\ секция математики\ }}
+    \, \mathrm{d} t
+\)}
+\end{center}
+
+\vfill
+
+\strut
+
+\clearpage
+
+
+\subsection*{Немного о~группах}
+
+Занятия проходили в шести группах:
+\begingroup\multicolsep=\parskip
+\begin{multicols}{3}
+9-2  <<Белые Ферзи>>
+\\
+9-1  <<Чёрные Ферзи>>
+\\
+10-2 <<Белые Ладьи>>
+\\
+10-1 <<Чёрные Ладьи>>
+\\
+11-2 <<Белые Слоны>>
+\\
+11-1 <<Чёрные Слоны>>
+\end{multicols}
+\endgroup
+
+Группы \mbox{9-*} были собраны из~школьников, обучающихся в~9 классе;
+аналогично для \mbox{10-*} и~\mbox{11-*}.
+
+Группы \mbox{*-1} были собраны из~предположительно более сильных школьников,
+и~задачи там в среднем сложнее, чем в~соответствующих группах \mbox{*-2}.
+
+
+\subsection*{Немного о~структуре}
+
+Материалы разбиты по~группам, в~пределах каждой группы отсортированы по~темам:
+\begin{itemize}
+    \item \emph{тренировочные олимпиады;}
+    \item алгебра;
+    \begin{itemize}
+        \item теория чисел;
+        \item многочлены;
+        \item неравенства;
+    \end{itemize}
+    \item геометрия;
+    \item комбинаторика;
+    \begin{itemize}
+        \item теория графов.
+    \end{itemize}
+\end{itemize}
+
+Материалы, общие для нескольких групп, дублируются.
+\ifsourcelinks
+Все материалы сопровождаются ссылками на~исходные файлы \LaTeX.
+\fi
+
+
+\subsection*{Немного об~авторах}
+
+Материалы Аркадия Борисовича Скопенкова не~представлены в~сборнике.
+Их~обновляемые версии можно найти по~следующим ссылкам:
+\\
+\url{http://www.mccme.ru/circles/oim/discrbook.pdf}
+\\
+\url{http://www.mccme.ru/circles/oim/exalong.pdf}
+\\
+\url{http://www.mccme.ru/circles/oim/algor.pdf}
+
+Материалы Александра Васильевича Шаповалова, представленные в~этом сборнике,
+можно также найти (вместе с~его материалами предыдущих лет) по~ссылке:
+\\
+\url{http://www.ashap.info/Uroki/Mosbory}
+
+\endgroup
+
