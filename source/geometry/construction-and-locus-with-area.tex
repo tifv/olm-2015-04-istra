@@ -55,13 +55,13 @@ $S_{AMB} : S_{BMC} : S_{CMA} = 3 : 2 : 1$.
 \ifx\problemfigurewidth\undefined
 \newlength\problemfigurewidth
 \newlength\problemtextwidth
-\newlength\spacewidth
+\newlength\problemspacewidth
 \fi
 \setlength\problemfigurewidth{2.5cm}
-\setlength\spacewidth{1em}
+\setlength\problemspacewidth{1em}
 \setlength\problemtextwidth{\linewidth}
 \addtolength\problemtextwidth{-\problemfigurewidth}
-\addtolength\problemtextwidth{-\spacewidth}
+\addtolength\problemtextwidth{-\problemspacewidth}
 \begin{minipage}{\problemtextwidth}
 \begin{problems}
 \item
@@ -77,7 +77,7 @@ $S_{AMB} : S_{BMC} : S_{CMA} = 3 : 2 : 1$.
 Выпуклая фигура ограничена углом $ABC$ и~дугой $AC$ (рис. справа).
 Постройте какую-нибудь прямую, разбивающую ее~на~две равновеликие части.
 \end{problems}
-\end{minipage}\hspace{\spacewidth}%
+\end{minipage}\hspace{\problemspacewidth}%
 \begin{minipage}{\problemfigurewidth}
     \jeolmfigure[width=\linewidth]{n6c}
 \end{minipage}

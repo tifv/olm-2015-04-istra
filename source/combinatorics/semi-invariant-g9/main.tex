@@ -44,13 +44,13 @@
 \ifx\problemfigurewidth\undefined
 \newlength\problemfigurewidth
 \newlength\problemtextwidth
-\newlength\spacewidth
+\newlength\problemspacewidth
 \fi
 \setlength\problemfigurewidth{2.5cm}
-\setlength\spacewidth{1em}
+\setlength\problemspacewidth{1em}
 \setlength\problemtextwidth{\linewidth}
 \addtolength\problemtextwidth{-\problemfigurewidth}
-\addtolength\problemtextwidth{-\spacewidth}
+\addtolength\problemtextwidth{-\problemspacewidth}
 \begin{minipage}{\problemtextwidth}
 \begin{problems}
 
@@ -65,7 +65,7 @@
 Какое наибольшее число ходов конь может сделать на этой доске?
 
 \end{problems}
-\end{minipage}\hspace{\spacewidth}%
+\end{minipage}\hspace{\problemspacewidth}%
 \begin{minipage}{\problemfigurewidth}
     \jeolmfigure[width=\linewidth]{../knight-restricted-moves}
 \end{minipage}

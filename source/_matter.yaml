@@ -11,7 +11,8 @@ _ashap-link:
   $groups$matter: false
   $groups$matter$into: false
   $matter:
-  - verbatim: \begin{flushright}\ttfamily\small
+  - verbatim: \begin{flushright}\small
+  - verbatim: \providecommand\url{\texttt}
   - delegate: link
   - verbatim: \end{flushright}
 
@@ -38,11 +39,15 @@ Integral:
 
   $matter[-integral,add-toc]:
 
+  - error:
+      "'source-link' and 'print' options are incompatible"
+    condition: [source-link, print]
+
   - preamble package: hyperref
-  - preamble verbatim: >-
-      \hypersetup{colorlinks}
+    condition: -print
+  - preamble verbatim: \hypersetup{colorlinks}
     provide: hypersetup:colorlinks
-    condition: source-link
+    condition: [source-link, -print]
 
   - - delegate: /integral[-add-toc]
   - verbatim: \tableofcontents
@@ -52,22 +57,30 @@ Integral:
 
   - verbatim: \chapter{Дополнительные материалы}\clearpage
 
-  - - verbatim:
-        \phantomsection\addcontentsline{toc}{section}
+  - - verbatim: \phantomsection
+      condition: -print
+    - verbatim:
+        \addcontentsline{toc}{section}
           {Тренировочная олимпиада --- 1, с решениями (Белые Ферзи)}
     - /olympiad/g9-1/r2[with-solutions,-add-toc]
-  - - verbatim:
-        \phantomsection\addcontentsline{toc}{section}
+  - - verbatim: \phantomsection
+      condition: -print
+    - verbatim:
+        \addcontentsline{toc}{section}
           {Тренировочная олимпиада --- 1, с решениями (Чёрные Ферзи)}
     - /olympiad/g9-1/r1[with-solutions,-add-toc]
   - - /algebra/inequality/karamata-proof
   - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс}
+    - verbatim: \phantomsection
+      condition: -print
     - verbatim:
-        \phantomsection\addcontentsline{toc}{section}
+        \addcontentsline{toc}{section}
           {На Северный полюс}
     - /extra[integral,-add-toc]
+    - verbatim: \phantomsection
+      condition: -print
     - verbatim:
-        \phantomsection\addcontentsline{toc}{section}
+        \addcontentsline{toc}{section}
           {На Северный полюс, с решениями}
     - /extra[integral,-add-toc,with-solutions]
     - verbatim: \endgroup

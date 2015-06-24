@@ -7,7 +7,6 @@
 % - .[no-header]
 
 % $matter[-matter-guard,no-header]:
-% - preamble package: hyperref
 % - verbatim: \begingroup\let\ifsourcelinks\iftrue
 %   condition: source-link
 % - .[matter-guard]
@@ -15,7 +14,8 @@
 %   condition: source-link
 
 \begingroup
-\providecommand{\ifsourcelinks}{\iffalse}
+\providecommand\ifsourcelinks{\iffalse}
+\providecommand\url{\texttt}
 
 \strut
 
