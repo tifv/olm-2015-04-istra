@@ -52,106 +52,95 @@ font-config:
     - verbatim:
         \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
     - delegate: setfont
+    - verbatim: |-
+        \let\cyrillicfont\normalfont
+        \let\cyrillicfontsf\sffamily
+        \let\cyrillicfonttt\ttfamily
     setfont:
       $style:
+      - delegate: .[cm]
+      $style[cm]:
       - delegate: cm-unicode
+      $style[liberation]:
+      - delegate: liberation
       $style[xits]:
       - delegate: xits
-      xits:
-        $style:
-        - verbatim: |-
-            \setmainfont
-              [
-                Path = /usr/share/texmf-dist/fonts/opentype/public/xits/,
-                Extension=.otf,
-                UprightFont=*-regular,
-                BoldFont=*-bold,
-                ItalicFont=*-italic,
-                BoldItalicFont=*-bolditalic,
-              ]
-              {xits}
-            \let\cyrillicfont\normalfont
-          provide: setmainfont
-        - delegate: ../liberation/sans
-        - delegate: ../liberation/mono
+      - delegate: arimo
+      - delegate: cousine
       cm-unicode:
         $style:
-        - delegate: main
-        - delegate: sans
-        - delegate: mono
-        main:
+        - delegate: serif
+        - delegate: sans-serif
+        - delegate: typewriter
+        serif:
           $style:
-          - verbatim: |-
-              \setmainfont[
-                Path = /usr/share/texmf-dist/fonts/opentype/public/cm-unicode/,
-                Extension=.otf,
-                BoldFont=cmunbx, ItalicFont=cmunti, BoldItalicFont=cmunbi,
-                SlantedFont=cmunsl,
-                SmallCapsFont=cmunrm, SmallCapsFeatures={Letters=SmallCaps},
-              ]{cmunrm}
-              \let\cyrillicfont\normalfont
+          - verbatim: \setmainfont{CMU Serif}
             provide: setmainfont
+        sans-serif:
+          $style:
+          - verbatim: \setsansfont{CMU Sans Serif}
+            provide: setsansfont
+        typewriter:
+          $style:
+          - verbatim: \setmonofont{CMU Typewriter Text}
+            provide: setmonofont
+      xits:
+        $style:
+        - verbatim: \setmainfont{XITS}
+          provide: setmainfont
+      dejavu:
+        $style:
+        - delegate: serif
+        - delegate: sans
+        - delegate: sans-mono
+        serif:
+          $style:
+          - verbatim: \setmainfont{DejaVu Serif}
+            provide: setmainfont
+          condensed:
+            $style:
+            - verbatim: \setmainfont{DejaVu Serif Condensed}
+              provide: setmainfont
         sans:
           $style:
-          - verbatim: |-
-              \setsansfont[
-                Path = /usr/share/texmf-dist/fonts/opentype/public/cm-unicode/,
-                Extension=.otf,
-                BoldFont=cmunsx, ItalicFont=cmunsi, BoldItalicFont=cmunso,
-              ]{cmunss}
-              \let\cyrillicfontsf\sffamily
+          - verbatim: \setsansfont{DejaVu Sans}
             provide: setsansfont
-        mono:
+          condensed:
+            $style:
+            - verbatim: \setsansfont{DejaVu Sans Condensed}
+              provide: setsansfont
+        sans-mono:
           $style:
-          - verbatim: |-
-              \setmonofont[
-                Path = /usr/share/texmf-dist/fonts/opentype/public/cm-unicode/,
-                Extension=.otf,
-                BoldFont=cmuntb, ItalicFont=cmunit, BoldItalicFont=cmuntx,
-                SlantedFont=cmunst,
-              ]{cmuntt}
-              \let\cyrillicfonttt\ttfamily
+          - verbatim: \setmonofont{DejaVu Sans Mono}
             provide: setmonofont
       liberation:
         $style:
-        - delegate: main
+        - delegate: serif
         - delegate: sans
         - delegate: mono
-        main:
+        serif:
           $style:
-          - verbatim: |-
-              \setmainfont{Liberation Serif}
-              \let\cyrillicfont\normalfont
+          - verbatim: \setmainfont{Liberation Serif}
             provide: setmainfont
         sans:
           $style:
-          - verbatim: |-
-              \setsansfont{Liberation Sans}
-              \let\cyrillicfontsf\sffamily
+          - verbatim: \setsansfont{Liberation Sans}
             provide: setsansfont
         mono:
           $style:
-          - verbatim: |-
-              \setmonofont{Liberation Mono}
-              \let\cyrillicfonttt\ttfamily
+          - verbatim: \setmonofont{Liberation Mono}
             provide: setmonofont
       tinos:
         $style:
-        - verbatim: |-
-            \setmainfont{Tinos}
-            \let\cyrillicfont\normalfont
+        - verbatim: \setmainfont{Tinos}
           provide: setmainfont
       arimo:
         $style:
-        - verbatim: |-
-            \setsansfont{Arimo}
-            \let\cyrillicfontsf\sffamily
+        - verbatim: \setsansfont{Arimo}
           provide: setsansfont
       cousine:
         $style:
-        - verbatim: |-
-            \setmonofont{Cousine}
-            \let\cyrillicfonttt\ttfamily
+        - verbatim: \setmonofont{Cousine}
           provide: setmonofont
 
 math-font-config:
@@ -166,28 +155,25 @@ math-font-config:
 
   unicode-math:
     $style:
-    - delegate: latinmodern
-    $style[xits]:
-    - delegate: xits
-    _package:
+    - package: unicode-math
+      options:
+      - vargreek-shape=unicode
+    - delegate: setfont
+    setfont:
       $style:
-      - package: unicode-math
-        options:
-        - vargreek-shape=unicode
-    latinmodern:
-      $style:
-      - delegate: ../_package
-      - verbatim: |-
-          \setmathfont{latinmodern-math.otf}
-        provide: setmathfont
-    xits:
-      $style:
-      - delegate: ../_package
-      - verbatim: |-
-          \setmathfont
-            [Path=/usr/share/texmf-dist/fonts/opentype/public/xits/]
-            {xits-math.otf}
-        provide: setmathfont
+      - delegate: .[cm]
+      $style[cm]:
+      - delegate: lm
+      $style[xits]:
+      - delegate: xits
+      lm:
+        $style:
+        - verbatim: \setmathfont{Latin Modern Math}
+          provide: setmathfont
+      xits:
+        $style:
+        - verbatim: \setmathfont{XITS Math}
+          provide: setmathfont
 
 math-symbols-config:
   $style[compiler-latex]:

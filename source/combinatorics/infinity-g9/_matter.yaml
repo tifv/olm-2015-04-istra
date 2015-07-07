@@ -1,27 +1,29 @@
-$matter[integral,g9r1]:
-- r1
+!!omap
 
-r1:
-  $groups$delegate$into: false
-  $groups$matter$into: false
-  $timetable:
-    g9r1:
-      2015-04-03: {}
-  $authors:
-  - Александр Шаповалов
-  $matter[g9r1,-no-header]:
-  - .[header]
-  $matter[g9r1,-no-ashap-link,no-header]:
-  - .[no-ashap-link]
-  - /_ashap-link
-  $matter[g9r1,no-ashap-link,no-header]:
-  - ../main
-  - verbatim: \resetproblem\hrulefill
-  - ../more[contained]
-  - ../advanced[contained]
-  $matter[g9r1,add-toc,no-ashap-link,no-header]:
-  - ../main
-  - verbatim: \resetproblem\hrulefill
-  - ../more[contained,-add-toc]
-  - ../advanced[contained,-add-toc]
+- $matter[integral,g9r1]:
+  - r1
+
+- r1:
+    $groups$delegate$into: false
+    $groups$matter$into: false
+    $timetable:
+      g9r1:
+        2015-04-03: {}
+    $authors:
+    - Александр Шаповалов
+    $matter[g9r1,-no-header]:
+    - .[header]
+    $matter[g9r1,-no-ashap-link,no-header]:
+    - .[no-ashap-link]
+    - /_ashap-link
+    $matter[g9r1,no-ashap-link,no-header]:
+    - ../main
+    - verbatim: \resetproblem\hrulefill
+    - ../more[contained]
+    - ../advanced[contained]
+    $matter[g9r1,add-toc,no-ashap-link,no-header]:
+    - ../main
+    - verbatim: \resetproblem\hrulefill
+    - ../more[contained,-add-toc]
+    - ../advanced[contained,-add-toc]
 
