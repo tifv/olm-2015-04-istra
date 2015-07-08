@@ -3,9 +3,9 @@ $style:
 - delegate: /_style
 - verbatim: |-
     \newcommand\jeolminstitutionname
-        {{\upshape[}\/Московские сборы по математике{\upshape\/]}}
+        {Московские сборы по математике}
     \newcommand\jeolmdaterange
-        {{\upshape[}\/30 марта -- 10 апреля 2015{\upshape\/]}}
+        {30 марта — 10 апреля 2015}
 
 _style:
   $groups$delegate: false

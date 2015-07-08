@@ -11,9 +11,7 @@ $style:
 - local
 - verbatim: |-
     \newcommand\jeolminstitutionname
-        {{\upshape[}\/%
-        Подготовка ко Всероссийской олимпиаде по математике%
-        {\upshape\/]}}
+        {Подготовка ко Всероссийской олимпиаде по математике}
     \newcommand\jeolmdaterange
-        {{\upshape[}\/30 марта -- 10 апреля 2015{\upshape\/]}}
+        {30 марта -- 10 апреля 2015}
 

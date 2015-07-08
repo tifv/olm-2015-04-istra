@@ -58,15 +58,21 @@ font-config:
         \let\cyrillicfonttt\ttfamily
     setfont:
       $style:
-      - delegate: .[cm]
+      - delegate: .[default-font]
+      $style[default-font]:
+      - delegate: .[cm,-default-font]
       $style[cm]:
       - delegate: cm-unicode
       $style[liberation]:
       - delegate: liberation
-      $style[xits]:
-      - delegate: xits
-      - delegate: arimo
-      - delegate: cousine
+      $style[times]:
+      - delegate: corefonts/times
+      - delegate: corefonts/arial
+      - delegate: liberation/mono
+      $style[palatino]:
+      - delegate: palladio
+      - delegate: croscorefonts/arimo
+      - delegate: croscorefonts/cousine
       cm-unicode:
         $style:
         - delegate: serif
@@ -84,7 +90,7 @@ font-config:
           $style:
           - verbatim: \setmonofont{CMU Typewriter Text}
             provide: setmonofont
-      xits:
+      xits: # Problem with combining accents
         $style:
         - verbatim: \setmainfont{XITS}
           provide: setmainfont
@@ -130,18 +136,65 @@ font-config:
           $style:
           - verbatim: \setmonofont{Liberation Mono}
             provide: setmonofont
-      tinos:
+      tex-gyre: # Cyrillic does not work
+        termes:
+          $style:
+          - verbatim: \setmainfont{TeX Gyre Termes}
+            provide: setmainfont
+        pagella:
+          $style:
+          - verbatim: \setmainfont{TeX Gyre Pagella}
+            provide: setmainfont
+        bonum:
+          $style:
+          - verbatim: \setmainfont{TeX Gyre Bonum}
+            provide: setmainfont
+        schola:
+          $style:
+          - verbatim: \setmainfont{TeX Gyre Schola}
+            provide: setmainfont
+        heros:
+          $style:
+          - verbatim: \setsansfont{TeX Gyre Heros}
+            provide: setsansfont
+        adventor:
+          $style:
+          - verbatim: \setsansfont{TeX Gyre Adventor}
+            provide: setsansfont
+        cursor:
+          $style:
+          - verbatim: \setmonofont{TeX Gyre Cursor}
+            provide: setmonofont
+      corefonts:
+        times:
+          $style:
+          - verbatim: \setmainfont{Times New Roman}
+            provide: setmainfont
+        arial:
+          $style:
+          - verbatim: \setsansfont{Arial}
+            provide: setsansfont
+        courier:
+          $style:
+          - verbatim: \setmonofont{Courier New}
+            provide: setmonofont
+      palladio: # problem with combining accents
         $style:
-        - verbatim: \setmainfont{Tinos}
+        - verbatim: \setmainfont{URW Palladio L}
           provide: setmainfont
-      arimo:
-        $style:
-        - verbatim: \setsansfont{Arimo}
-          provide: setsansfont
-      cousine:
-        $style:
-        - verbatim: \setmonofont{Cousine}
-          provide: setmonofont
+      croscorefonts:
+        tinos:
+          $style:
+          - verbatim: \setmainfont{Tinos}
+            provide: setmainfont
+        arimo:
+          $style:
+          - verbatim: \setsansfont{Arimo}
+            provide: setsansfont
+        cousine:
+          $style:
+          - verbatim: \setmonofont{Cousine}
+            provide: setmonofont
 
 math-font-config:
   $style[compiler-latex]:
@@ -149,7 +202,7 @@ math-font-config:
   $style[compiler-pdflatex]:
     []
   $style[compiler-lualatex]:
-    []
+  - delegate: unicode-math
   $style[compiler-xelatex]:
   - delegate: unicode-math
 
@@ -161,19 +214,39 @@ math-font-config:
     - delegate: setfont
     setfont:
       $style:
-      - delegate: .[cm]
+      - delegate: .[default-font]
+      $style[default-font]:
+      - delegate: .[cm,-default-font]
       $style[cm]:
       - delegate: lm
-      $style[xits]:
+      $style[times]:
+      - delegate: tex-gyre/termes
+      $style[times,xits]:
       - delegate: xits
+      $style[palatino]:
+      - delegate: asana
       lm:
         $style:
         - verbatim: \setmathfont{Latin Modern Math}
           provide: setmathfont
       xits:
+        # too small 'divide by' operator
         $style:
         - verbatim: \setmathfont{XITS Math}
           provide: setmathfont
+      asana:
+        $style:
+        - verbatim: \setmathfont{Asana Math}
+          provide: setmathfont
+      tex-gyre:
+        termes:
+          $style:
+          - verbatim: \setmathfont{TeX Gyre Termes Math}
+            provide: setmathfont
+        pagella:
+          $style:
+          - verbatim: \setmathfont{TeX Gyre Pagella Math}
+            provide: setmathfont
 
 math-symbols-config:
   $style[compiler-latex]:
