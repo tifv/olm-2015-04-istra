@@ -22,14 +22,6 @@ Integral:
   $groups$matter: false
   $groups$matter$into: false
 
-  $build$compiler$default: pdflatex
-  $build$options[xelatex]:
-    compiler: xelatex
-  $build$options[lualatex]:
-    compiler: lualatex
-  $build$options[pdflatex]:
-    compiler: pdflatex
-
   $style:
   - document class: book
     options: [10pt, a4paper]
@@ -63,13 +55,13 @@ Integral:
       condition: -print
     - verbatim:
         \addcontentsline{toc}{section}
-          {Тренировочная олимпиада — 1, с решениями (Белые Ферзи)}
+          {Тренировочная олимпиада --- 1, с решениями (Белые Ферзи)}
     - /olympiad/g9-1/r2[with-solutions,-add-toc]
   - - verbatim: \phantomsection
       condition: -print
     - verbatim:
         \addcontentsline{toc}{section}
-          {Тренировочная олимпиада — 1, с решениями (Чёрные Ферзи)}
+          {Тренировочная олимпиада --- 1, с решениями (Чёрные Ферзи)}
     - /olympiad/g9-1/r1[with-solutions,-add-toc]
   - - /algebra/inequality/karamata-proof
   - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс}

@@ -22,14 +22,21 @@
 
 \item
 Докажите неравенство
+\begingroup
+\let\oldsqrt\sqrt
+\renewcommand\sqrt[1]{\oldsqrt{\mathrlap{\phantom{x_1^2}}{#1}}}
 \begin{align*}
     \hspace{5em}&\hspace{-5em}
-    \sqrt{(x_1 + x_2 + \ldots + x_n)^2 + (y_1 + y_2 + \ldots + y_n)^2}
+    \sqrt{
+        (x_1 + x_2 + \ldots + x_n)^2 +
+        (y_1 + y_2 + \ldots + y_n)^2
+    }
 \leq\\&{}\leq
     \sqrt{x_1^2 + y_1^2} + \sqrt{x_2^2 + y_2^2}
     + \ldots +
     \sqrt{x_n^2 + y_n^2}
 \, . \end{align*}
+\endgroup
 
 \item
 На~доске написаны в~порядке возрастания два натуральных числа $x$ и~$y$

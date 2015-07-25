@@ -1,12 +1,8 @@
-$build$compiler$default: pdflatex
 $style:
 - delegate: /_style
 - verbatim: |-
     \newcommand\jeolminstitutionname
         {Московские сборы по математике}
     \newcommand\jeolmdaterange
-        {30 марта — 10 апреля 2015}
-
-_style:
-  $groups$delegate: false
+        {30 марта --- 10 апреля 2015}
 
