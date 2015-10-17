@@ -10,7 +10,13 @@
 
 \begingroup \providecommand\ifincludesolutions{\iffalse}
 
-\begingroup \def\eulerphi{\mathrm{\phi}}
+\begingroup
+    \ifx\mathup\undefined
+        \def\eulerphi{\upphi}
+    \else
+        \def\eulerphi{\mathrm{\phi}}
+    \fi
+    \def\divides{\mathrel{\vert}}
 
 \ifincludesolutions
 \subsection*{Версия с решениями}
@@ -45,7 +51,7 @@ $s \equiv t \pmod{\delta}$.
 $s$ делится на~$\delta$.
 \\
 \subproblem
-\ifincludesolutions\label{extra/algebra:phi:problem}\fi
+\jeolmlabel{e/algebra:phi:problem}%
 Число $\delta$ является делителем $\eulerphi(m)$.
 
 \end{problems}
@@ -123,7 +129,7 @@ $(q - 1)$ делится на~$\delta$.
 \ifincludesolutions
 Очевидно, что таких дробей $\eulerphi(a^n - 1)$.
 При этом понятно, что $n$~--- порядок $a$ по~модулю $(a^n - 1)$.
-Но~тогда условие задачи очевидно из~задачи \ref{extra/algebra:phi:problem}.
+Но~тогда условие задачи очевидно из~задачи \ref{e/algebra:phi:problem}.
 \fi % \ifincludesolutions
 
 \begin{problems}
@@ -278,7 +284,7 @@ $q^{256} \equiv 1 \pmod{257}$.
 Что мы~и~хотели доказать.
 \fi % \ifincludesolutions
 
-\endgroup % \def\eulerphi
+\endgroup % \def\eulerphi \def\divides
 
 \endgroup % \providecommand\ifincludesolutions
 

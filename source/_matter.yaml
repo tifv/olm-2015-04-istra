@@ -49,21 +49,28 @@ Integral:
   - verbatim: \mainmatter
   - delegate: .[integral,no-ashap-link]
 
-  - verbatim: \chapter{Дополнительные материалы}\clearpage
+  - verbatim: \chapter{Дополнительные материалы}
 
   - - verbatim: \phantomsection
       condition: -print
     - verbatim:
         \addcontentsline{toc}{section}
           {Тренировочная олимпиада --- 1, с решениями (Белые Ферзи)}
+    - verbatim: \begin{jeolmlabelspace}{solutions}
     - /olympiad/g9-1/r2[with-solutions,-add-toc]
+    - verbatim: \end{jeolmlabelspace}
+
   - - verbatim: \phantomsection
       condition: -print
     - verbatim:
         \addcontentsline{toc}{section}
           {Тренировочная олимпиада --- 1, с решениями (Чёрные Ферзи)}
+    - verbatim: \begin{jeolmlabelspace}{solutions}
     - /olympiad/g9-1/r1[with-solutions,-add-toc]
+    - verbatim: \end{jeolmlabelspace}
+
   - - /algebra/inequality/karamata-proof
+
   - - verbatim: \begingroup\def\jeolmgroupname{Северный полюс}
     - verbatim: \phantomsection
       condition: -print
@@ -76,20 +83,40 @@ Integral:
     - verbatim:
         \addcontentsline{toc}{section}
           {На Северный полюс, с решениями}
+    - verbatim: \begin{jeolmlabelspace}{solutions}
     - /extra[integral,-add-toc,with-solutions]
+    - verbatim: \end{jeolmlabelspace}
     - verbatim: \endgroup
 
   $matter[integral]:
+
   - verbatim: \chapter{Белые Ферзи (9-2)}
+  - verbatim: \begin{jeolmlabelspace}{g9r2}
   - /[g9r2]
+  - verbatim: \end{jeolmlabelspace}
+
   - verbatim: \chapter{Чёрные Ферзи (9-1)}
+  - verbatim: \begin{jeolmlabelspace}{g9r1}
   - /[g9r1]
+  - verbatim: \end{jeolmlabelspace}
+
   - verbatim: \chapter{Белые Ладьи (10-2)}
+  - verbatim: \begin{jeolmlabelspace}{g10r2}
   - /[g10r2]
+  - verbatim: \end{jeolmlabelspace}
+
   - verbatim: \chapter{Чёрные Ладьи (10-1)}
+  - verbatim: \begin{jeolmlabelspace}{g10r1}
   - /[g10r1]
+  - verbatim: \end{jeolmlabelspace}
+
   - verbatim: \chapter{Белые Слоны (11-2)}
+  - verbatim: \begin{jeolmlabelspace}{g11r2}
   - /[g11r2]
+  - verbatim: \end{jeolmlabelspace}
+
   - verbatim: \chapter{Чёрные Слоны (11-1)}
+  - verbatim: \begin{jeolmlabelspace}{g11r1}
   - /[g11r1]
+  - verbatim: \end{jeolmlabelspace}
 

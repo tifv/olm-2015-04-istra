@@ -9,7 +9,13 @@
 % $authors:
 % - Андрей Меньщиков
 
-\begingroup \def\eulerphi{\mathrm{\phi}}
+\begingroup
+    \ifx\mathup\undefined
+        \def\eulerphi{\upphi}
+    \else
+        \def\eulerphi{\mathrm{\phi}}
+    \fi
+    \def\divides{\mathrel{\vert}}
 
 \definition
 Натуральное число~$d$ называется \emph{показателем числа~$a$ по~модулю~$m$},
@@ -39,7 +45,7 @@ $a^d \equiv 1 \pmod{m}$.
 Докажите, что сравнение $x^3 \equiv 1 \pmod{p}$ имеет единственное решение.
 \\
 \subproblem
-Докажите, что для любого оcтатка~$a$ сравнение $x^3 \equiv a \pmod{p}$ имеет
+Докажите, что для любого остатка~$a$ сравнение $x^3 \equiv a \pmod{p}$ имеет
 единственное решение.
 
 \item
@@ -100,5 +106,5 @@ $k$~--- нечетное натуральное число.
 
 \end{problems}
 
-\endgroup % \def\eulerphi
+\endgroup % \def\eulerphi \def\divides
 

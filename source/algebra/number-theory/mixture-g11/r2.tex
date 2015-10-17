@@ -9,7 +9,12 @@
 % $authors:
 % - Антон Гусев
 
-\begingroup \def\eulerphi{\mathrm{\phi}}
+\begingroup
+    \ifx\mathup\undefined
+        \def\eulerphi{\upphi}
+    \else
+        \def\eulerphi{\mathrm{\phi}}
+    \fi
 
 \begin{problems}
 

@@ -9,7 +9,13 @@
 % $authors:
 % - Антон Гусев
 
-\begingroup \def\eulerphi{\mathrm{\phi}}
+\begingroup
+    \ifx\mathup\undefined
+        \def\eulerphi{\upphi}
+    \else
+        \def\eulerphi{\mathrm{\phi}}
+    \fi
+    \def\divides{\mathrel{\vert}}
 
 \definition
 При $(a, m) = 1$ существует натуральное $\delta$ с условием
@@ -86,5 +92,5 @@ $641 \cdot 6700417$.
 
 \end{problems}
 
-\endgroup % \def\eulerphi
+\endgroup % \def\eulerphi \def\divides
 
